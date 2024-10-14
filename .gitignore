@@ -1,8 +1,7 @@
 /static/js/
 /node_modules
 Procfile
-runtime.txt
-README*.txt
+*.txt
 *.py
 *.pyc
 *.json

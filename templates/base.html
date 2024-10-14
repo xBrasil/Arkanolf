@@ -8,18 +8,23 @@
 
     <!-- Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- Custom Styles -->
-    <!-- Se estivermos no Flask -->
-    {% if 'FLASK_ENV' in config or 'FLASK_APP' in config %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <!-- Para GitHub Pages ou servidores estáticos -->
-    {% else %}
+
+    {% if config.get('DEPLOY_ENV') %}
     <link rel="stylesheet" href="static/css/styles.css">
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="487ffca0-f054-4df4-8d87-dbb450d4d9f1" type="text/javascript" async></script>
+    {% else %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     {% endif %}
 </head>
 <body>
-
+    {% if config.get('DEPLOY_ENV') %}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QE91FG4KBB"></script>
+    <script src="static/js_obfuscated/googlestuff.js"></script>
+    {% endif %}
+    
     <!-- Conteúdo principal -->
     <main>
         {% block content %}{% endblock %}
@@ -27,23 +32,29 @@
 
     <!-- Rodapé comum -->
     <footer>
-        <!-- Se estivermos no Flask -->
-        {% if 'FLASK_ENV' in config or 'FLASK_APP' in config %}
-        <a href="{{ url_for('terms.html') }}">Terms of Use</a> |
-        <a href="{{ url_for('privacy.html') }}">Privacy Policy</a> |
-        <a href="{{ url_for('license.html') }}">License</a>
-        {% else %}
-        <!-- Para GitHub Pages ou servidores estáticos -->
+        {% if config.get('DEPLOY_ENV') %}
         <a href="terms.html">Terms of Use</a> |
         <a href="privacy.html">Privacy Policy</a> |
         <a href="license.html">License</a>
+        {% else %}
+        <a href="{{ url_for('terms') }}">Terms of Use</a> |
+        <a href="{{ url_for('privacy') }}">Privacy Policy</a> |
+        <a href="{{ url_for('license') }}">License</a>
         {% endif %}
-        <span>© 2024 All rights reserved by</span><span id="id="authorlink"><a href="https://br.linkedin.com/in/rodolfosaraiva/">Rodolfo Motta Saraiva</a></span>
+        <span>© 2024 All rights reserved by</span><span id="authorlink"><a href="https://br.linkedin.com/in/rodolfosaraiva/">Rodolfo Motta Saraiva</a></span>
     </footer>
 
     <!-- Scripts comuns -->
-    <script src="{{ url_for('static', filename='js_obfuscated/levelMaps.js') }}"></script>
-    <script src="{{ url_for('static', filename='js_obfuscated/levelPalettes.js') }}"></script>
-    <script src="{{ url_for('static', filename='js_obfuscated/game.js') }}"></script>
+    {% if config.get('DEPLOY_ENV') %}
+    <script src="static/js_obfuscated/levelMaps.js"></script>
+    <script src="static/js_obfuscated/levelPalettes.js"></script>
+    <script src="static/js_obfuscated/gameDifficulties.js"></script>
+    <script src="static/js_obfuscated/game.js"></script>
+    {% else %}
+    <script src="{{ url_for('static', filename='js/levelMaps.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/levelPalettes.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/gameDifficulties.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+    {% endif %}
 </body>
 </html>

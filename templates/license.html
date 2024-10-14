@@ -25,7 +25,7 @@
     <p>If you have any questions regarding this License Agreement, please contact the creator at <a href="mailto:license@arkanolf.com">license@arkanolf.com</a>.</p>
 
     <div class="back-button">
-        <a href="{% if 'FLASK_ENV' in config or 'FLASK_APP' in config %}{{ url_for('index') }}{% else %}/index.html{% endif %}">Back to Game</a>
+        <a href="{% if config.get('DEPLOY_ENV') %}/index.html{% else %}{{ url_for('index') }}{% endif %}">Back to Game</a>
     </div>
 </div>
 {% endblock %}
