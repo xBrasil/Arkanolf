@@ -31,14 +31,14 @@
         {% if 'FLASK_ENV' in config or 'FLASK_APP' in config %}
         <a href="{{ url_for('terms.html') }}">Terms of Use</a> |
         <a href="{{ url_for('privacy.html') }}">Privacy Policy</a> |
-        <a href="{{ url_for('license.html') }}">License</a> |
+        <a href="{{ url_for('license.html') }}">License</a>
         {% else %}
         <!-- Para GitHub Pages ou servidores estáticos -->
         <a href="terms.html">Terms of Use</a> |
         <a href="privacy.html">Privacy Policy</a> |
-        <a href="license.html">License</a> |
+        <a href="license.html">License</a>
         {% endif %}
-        <span>  © 2024 All rights reserved by Rodolfo Motta Saraiva</span>
+        <span>© 2024 All rights reserved by</span><span id="id="authorlink"><a href="https://br.linkedin.com/in/rodolfosaraiva/">Rodolfo Motta Saraiva</a></span>
     </footer>
 
     <!-- Scripts comuns -->
