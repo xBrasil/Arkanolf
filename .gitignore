@@ -3,5 +3,9 @@
 Procfile
 runtime.txt
 README*.txt
-app.py
+*.py
+*.pyc
 *.json
+/build/
+/templates/
+/__pycache__/

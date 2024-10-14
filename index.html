@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Arkanolf: A futuristic and neon-infused breakout game">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arkanolf - Futuristic Breakout Game</title>
+
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <!-- Se estivermos no Flask -->
+    
+    <link rel="stylesheet" href="static/css/styles.css">
+    
+</head>
+<body>
+
+    <!-- Conteúdo principal -->
+    <main>
+        
+    <!-- Logo grande atrás do canvas -->
+    <div id="logo">Arkanolf</div>
+
+    <!-- Game Canvas -->
+    <div id="canvasContainer">
+        <canvas id="gameCanvas"></canvas>
+    </div>
+
+    </main>
+
+    <!-- Rodapé comum -->
+    <footer>
+        <!-- Se estivermos no Flask -->
+        
+        <!-- Para GitHub Pages ou servidores estáticos -->
+        <a href="terms.html">Terms of Use</a> |
+        <a href="privacy.html">Privacy Policy</a> |
+        <a href="license.html">License</a> |
+        
+        <span>  © 2024 All rights reserved by Rodolfo Motta Saraiva</span>
+    </footer>
+
+    <!-- Scripts comuns -->
+    <script src="/static/js_obfuscated/levelMaps.js"></script>
+    <script src="/static/js_obfuscated/levelPalettes.js"></script>
+    <script src="/static/js_obfuscated/game.js"></script>
+</body>
+</html>
