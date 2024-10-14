@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}License - Arkanolf{% endblock %}
+
+{% block content %}
+<div class="content">
+    <h1>License Agreement</h1>
+
+    <h2>1. Free-to-Play License</h2>
+    <p>Arkanolf is provided to you as a free-to-play game. You are granted a limited, non-exclusive, non-transferable license to access and use the game for personal entertainment purposes only. You may not use Arkanolf for any commercial purposes without express written consent from the creator, Rodolfo Motta Saraiva.</p>
+
+    <h2>2. Restrictions</h2>
+    <p>You may not reverse-engineer, decompile, modify, or create derivative works based on the game. Any attempt to tamper with, distribute, or use the game beyond the terms outlined here is strictly prohibited.</p>
+
+    <h2>3. Disclaimer of Liability</h2>
+    <p>Arkanolf is provided "as is" without warranties of any kind, whether express or implied. The creator, Rodolfo Motta Saraiva, is not responsible for any damages, loss of data, or malfunction that may occur while using the game. By playing the game, you agree to use it at your own risk.</p>
+
+    <h2>4. Acceptance of Terms</h2>
+    <p>By accessing and playing Arkanolf, you agree to the terms of this license. If you do not agree with any part of this agreement, you must exit the website and discontinue use of the game immediately.</p>
+
+    <h2>5. Changes to This License</h2>
+    <p>We reserve the right to update this License Agreement at any time. Your continued use of Arkanolf after such changes constitutes acceptance of the updated terms. It is your responsibility to review the License Agreement regularly for any changes.</p>
+
+    <h2>6. Contact Information</h2>
+    <p>If you have any questions regarding this License Agreement, please contact the creator at <a href="mailto:license@arkanolf.com">license@arkanolf.com</a>.</p>
+
+    <div class="back-button">
+        <a href="{% if 'FLASK_ENV' in config or 'FLASK_APP' in config %}{{ url_for('index') }}{% else %}/index.html{% endif %}">Back to Game</a>
+    </div>
+</div>
+{% endblock %}

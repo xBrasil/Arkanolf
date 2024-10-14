@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="{% block meta_description %}Arkanolf: A futuristic and neon-infused breakout game{% endblock %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Arkanolf{% endblock %}</title>
+
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <!-- Se estivermos no Flask -->
+    {% if 'FLASK_ENV' in config or 'FLASK_APP' in config %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- Para GitHub Pages ou servidores estáticos -->
+    {% else %}
+    <link rel="stylesheet" href="static/css/styles.css">
+    {% endif %}
+</head>
+<body>
+
+    <!-- Conteúdo principal -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Rodapé comum -->
+    <footer>
+        <!-- Se estivermos no Flask -->
+        {% if 'FLASK_ENV' in config or 'FLASK_APP' in config %}
+        <a href="{{ url_for('terms.html') }}">Terms of Use</a> |
+        <a href="{{ url_for('privacy.html') }}">Privacy Policy</a> |
+        <a href="{{ url_for('license.html') }}">License</a> |
+        {% else %}
+        <!-- Para GitHub Pages ou servidores estáticos -->
+        <a href="terms.html">Terms of Use</a> |
+        <a href="privacy.html">Privacy Policy</a> |
+        <a href="license.html">License</a> |
+        {% endif %}
+        <span>  © 2024 All rights reserved by Rodolfo Motta Saraiva</span>
+    </footer>
+
+    <!-- Scripts comuns -->
+    <script src="{{ url_for('static', filename='js_obfuscated/levelMaps.js') }}"></script>
+    <script src="{{ url_for('static', filename='js_obfuscated/levelPalettes.js') }}"></script>
+    <script src="{{ url_for('static', filename='js_obfuscated/game.js') }}"></script>
+</body>
+</html>

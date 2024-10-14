@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}Terms of Use - Arkanolf{% endblock %}
+
+{% block content %}
+<div class="content">
+    <h1>Terms of Use</h1>
+
+    <h2>1. Intellectual Property</h2>
+    <p>All content and materials available on Arkanolf, including but not limited to the game design, artwork, code, and branding, are the intellectual property of Rodolfo Motta Saraiva, and are protected by applicable intellectual property laws. Unauthorized reproduction, distribution, or use of any content from this website is strictly prohibited.</p>
+
+    <h2>2. User Conduct</h2>
+    <p>By accessing and playing Arkanolf, you agree to use the game for personal entertainment only. You may not engage in any activity that seeks to exploit, disrupt, or cause harm to the game or its servers. Any misuse or malicious activity may result in termination of access to the game.</p>
+
+    <h2>3. Disclaimer of Warranties</h2>
+    <p>Arkanolf is provided as a free-to-play game "as is" without any warranties of any kind, either express or implied. The creator, Rodolfo Motta Saraiva, makes no guarantee that the game will be available, uninterrupted, or free from errors. You acknowledge that you are using the game at your own risk.</p>
+
+    <h2>4. Limitation of Liability</h2>
+    <p>Under no circumstances shall Rodolfo Motta Saraiva be liable for any direct, indirect, incidental, consequential, or punitive damages resulting from your use of, or inability to use, Arkanolf. This includes, but is not limited to, any damages for loss of data or functionality, system failures, or any disruption caused by the game, even if the creator has been advised of the possibility of such damages.</p>
+
+    <h2>5. Updates and Changes</h2>
+    <p>These terms may be updated periodically to reflect changes in the game or applicable laws. Continued use of Arkanolf after such changes constitutes your acceptance of the updated terms. It is your responsibility to review these terms regularly.</p>
+
+    <h2>6. Governing Law</h2>
+    <p>These terms shall be governed by and construed in accordance with the laws of Brazil, without regard to its conflict of law provisions. Any disputes arising from or related to these terms shall be subject to the exclusive jurisdiction of the courts of São Paulo, Brazil.</p>
+
+    <h2>7. Contact Information</h2>
+    <p>If you have any questions or concerns regarding these Terms of Use, you may contact the creator at <a href="mailto:support@arkanolf.com">support@arkanolf.com</a>.</p>
+
+    <div class="back-button">
+        <a href="{% if 'FLASK_ENV' in config or 'FLASK_APP' in config %}{{ url_for('index') }}{% else %}/index.html{% endif %}">Back to Game</a>
+    </div>
+</div>
+{% endblock %}
