@@ -124,8 +124,7 @@ a:hover {
     /* Não é necessário definir width:100% pois já está em flex container */
     
     #gameCanvas {
-        width: 100%;
-        height: auto; /* Ajustado para não ocupar toda a altura, mantendo o rodapé visível */
+        height: 100%;
     }
 
     #logo {
@@ -140,8 +139,7 @@ a:hover {
 
 @media (max-width: 480px) {
     #gameCanvas {
-        width: 100%;
-        height: auto; /* Ajustado para não ocupar toda a altura, mantendo o rodapé visível */
+        height: 100%;
     }
 
     #logo {
