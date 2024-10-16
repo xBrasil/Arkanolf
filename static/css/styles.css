@@ -120,11 +120,9 @@ a:hover {
 
 /* Mobile specific adjustments */
 @media (max-width: 768px) {
-    #canvasContainer {
-        height: 100%;
-        width: 100%;
-    }
-
+    /* Remover quaisquer definições de altura no #canvasContainer */
+    /* Não é necessário definir width:100% pois já está em flex container */
+    
     #gameCanvas {
         width: 100%;
         height: auto;
@@ -143,15 +141,15 @@ a:hover {
 }
 
 @media (max-width: 480px) {
-    #logo {
-        font-size: 20vw; /* Ajuste do logo para smartphones */
-    }
-
     #gameCanvas {
         width: 100%;
-        height: 100%; /* O canvas ocupará toda a tela no mobile */
+        height: auto; /* Ajustado para não ocupar toda a altura, mantendo o rodapé visível */
         max-width: none;
         max-height: none;
+    }
+
+    #logo {
+        font-size: 20vw; /* Ajuste do logo para smartphones */
     }
 
     footer {
