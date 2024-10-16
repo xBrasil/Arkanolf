@@ -125,9 +125,7 @@ a:hover {
     
     #gameCanvas {
         width: 100%;
-        height: auto;
-        max-width: none; /* Remove limite para ocupar a tela toda em dispositivos móveis */
-        max-height: none;
+        height: auto; /* Ajustado para não ocupar toda a altura, mantendo o rodapé visível */
     }
 
     #logo {
@@ -144,8 +142,6 @@ a:hover {
     #gameCanvas {
         width: 100%;
         height: auto; /* Ajustado para não ocupar toda a altura, mantendo o rodapé visível */
-        max-width: none;
-        max-height: none;
     }
 
     #logo {
