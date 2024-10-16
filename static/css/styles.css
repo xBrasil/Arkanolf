@@ -15,7 +15,7 @@ html, body {
     align-items: center;
     flex-grow: 1;
     height: 100%; /* Garante que ocupe todo o espaço disponível */
-    min-height: calc(100vh - 50px); /* Ajuste o cálculo para levar em conta o rodapé */
+    min-height: calc(100vh - 20px); /* Ajuste o cálculo para levar em conta o rodapé */
 }
 
 #gameCanvas {
@@ -42,9 +42,9 @@ html, body {
 
 footer {
     text-align: center;
-    padding: 10px 0;
+    padding: 0 0;
     font-size: 12px;
-    height: 20px; /* Altura do rodapé */
+    height: 10px; /* Altura do rodapé */
     flex-shrink: 0; /* Impede que o rodapé seja comprimido */
 }
 
@@ -116,4 +116,46 @@ a:hover {
 
 .back-button a:hover {
     background-color: #FFA500; /* Tom de laranja ao passar o mouse */
+}
+
+/* Mobile specific adjustments */
+@media (max-width: 768px) {
+    #canvasContainer {
+        height: 100%;
+        width: 100%;
+    }
+
+    #gameCanvas {
+        width: 100%;
+        height: auto;
+        max-width: none; /* Remove limite para ocupar a tela toda em dispositivos móveis */
+        max-height: none;
+    }
+
+    #logo {
+        font-size: 15vw; /* Ajuste do logo para tablets */
+    }
+
+    footer {
+        padding: 20px 0;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    #logo {
+        font-size: 20vw; /* Ajuste do logo para smartphones */
+    }
+
+    #gameCanvas {
+        width: 100%;
+        height: 100%; /* O canvas ocupará toda a tela no mobile */
+        max-width: none;
+        max-height: none;
+    }
+
+    footer {
+        padding: 25px 0;
+        font-size: 18px;
+    }
 }
