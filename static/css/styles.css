@@ -120,13 +120,19 @@ a:hover {
 
 /* Mobile specific adjustments */
 @media (max-width: 768px) {
-    #canvasContainer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-grow: 1;
-        height: 100%; /* Garante que ocupe todo o espaço disponível */
-        min-height: calc(100vh); /* Ajuste o cálculo para ocupar tudo, dane-se o rodapé */
+    html, body {
+        overflow: hidden; /* Evita rolagem */
     }
+
+    #canvasContainer {
+        min-height: calc(100vh); /* Ajuste o cálculo para ocupar tudo, dane-se o rodapé */
+        max-width: none; /* Remove limite para ocupar a tela toda em dispositivos móveis */
+        max-height: none;
+    }
+    footer {
+        flex-shrink: 1;
+    }
+
+
 }
 
