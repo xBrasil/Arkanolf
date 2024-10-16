@@ -121,18 +121,30 @@ a:hover {
 /* Mobile specific adjustments */
 @media (max-width: 768px) {
     html, body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Ajuste para organizar os elementos sem grande espaçamento */
+        background: radial-gradient(circle, #0f0c29, #302b63, #24243e);
+        color: white;
         overflow: hidden; /* Evita rolagem */
     }
 
+
     #canvasContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        height: 100%; /* Garante que ocupe todo o espaço disponível */
         min-height: calc(100vh); /* Ajuste o cálculo para ocupar tudo, dane-se o rodapé */
         max-width: none; /* Remove limite para ocupar a tela toda em dispositivos móveis */
         max-height: none;
+        overflow: hidden; /* Evita rolagem */
     }
     footer {
         flex-shrink: 1;
     }
-
-
 }
 
