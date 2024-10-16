@@ -119,35 +119,13 @@ a:hover {
 }
 
 /* Mobile specific adjustments */
-@media (max-width: 768px) {
-    /* Remover quaisquer definições de altura no #canvasContainer */
-    /* Não é necessário definir width:100% pois já está em flex container */
-    
-    #gameCanvas {
-        height: 100%;
-    }
-
-    #logo {
-        font-size: 15vw; /* Ajuste do logo para tablets */
-    }
-
-    footer {
-        padding: 20px 0;
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    #gameCanvas {
-        height: 100%;
-    }
-
-    #logo {
-        font-size: 20vw; /* Ajuste do logo para smartphones */
-    }
-
-    footer {
-        padding: 25px 0;
-        font-size: 18px;
+@media () {
+    #canvasContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        height: 100%; /* Garante que ocupe todo o espaço disponível */
+        min-height: calc(100vh); /* Ajuste o cálculo para ocupar tudo, dane-se o rodapé */
     }
 }

@@ -5,6 +5,7 @@ Procfile
 *.py
 *.pyc
 *.json
+*.zip
 /build/
 /templates/
 /__pycache__/
