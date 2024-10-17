@@ -48,11 +48,13 @@
     {% if config.get('DEPLOY_ENV') %}
     <script src="static/js_obfuscated/levelMaps.js"></script>
     <script src="static/js_obfuscated/levelPalettes.js"></script>
+    <script src="static/js_obfuscated/gameBackgrounds.js"></script>
     <script src="static/js_obfuscated/gameDifficulties.js"></script>
     <script src="static/js_obfuscated/game.js"></script>
     {% else %}
     <script src="{{ url_for('static', filename='js/levelMaps.js') }}"></script>
     <script src="{{ url_for('static', filename='js/levelPalettes.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/gameBackgrounds.js') }}"></script>
     <script src="{{ url_for('static', filename='js/gameDifficulties.js') }}"></script>
     <script src="{{ url_for('static', filename='js/game.js') }}"></script>
     {% endif %}
