@@ -117,3 +117,7 @@ a:hover {
 .back-button a:hover {
     background-color: #FFA500; /* Tom de laranja ao passar o mouse */
 }
+
+.hide-cursor {
+    cursor: none;
+}
