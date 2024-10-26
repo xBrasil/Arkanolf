@@ -6,6 +6,8 @@ Procfile
 *.pyc
 *.json
 *.zip
+*.webp
+*.psd
 /build/
 /templates/
 /__pycache__/
