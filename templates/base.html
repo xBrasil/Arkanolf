@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="{% block meta_description %}Arkanolf: A futuristic and neon-infused breakout game{% endblock %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Arkanolf{% endblock %}</title>
+
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+
+    {% if config.get('DEPLOY_ENV') %}
+    <link rel="stylesheet" href="static/css/styles.css">
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="487ffca0-f054-4df4-8d87-dbb450d4d9f1" type="text/javascript" async></script>
+    {% else %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    {% endif %}
+</head>
+<body>
+    {% if config.get('DEPLOY_ENV') %}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QE91FG4KBB"></script>
+    <script src="static/js_obfuscated/googlestuff.js"></script>
+    {% endif %}
+    
+    <!-- Conteúdo principal -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Rodapé comum -->
+    <footer>
+        {% if config.get('DEPLOY_ENV') %}
+        <a href="terms.html">Terms of Use</a> |
+        <a href="privacy.html">Privacy Policy</a> |
+        <a href="license.html">License</a>
+        {% else %}
+        <a href="{{ url_for('terms') }}">Terms of Use</a> |
+        <a href="{{ url_for('privacy') }}">Privacy Policy</a> |
+        <a href="{{ url_for('license') }}">License</a>
+        {% endif %}
+        <span>© 2024 All rights reserved by</span><span id="authorlink"><a href="https://br.linkedin.com/in/rodolfosaraiva/">Rodolfo Motta Saraiva</a></span>
+    </footer>
+
+    <!-- Scripts comuns -->
+    {% if config.get('DEPLOY_ENV') %}
+    <script src="static/js_obfuscated/levelMaps.js"></script>
+    <script src="static/js_obfuscated/levelPalettes.js"></script>
+    <script src="static/js_obfuscated/gameBackgrounds.js"></script>
+    <script src="static/js_obfuscated/gameDifficulties.js"></script>
+    <script src="static/js_obfuscated/gameGfx.js"></script>
+    <script src="static/js_obfuscated/gameIOandUI.js"></script>
+    <script src="static/js_obfuscated/gameParticles.js"></script>
+    <script src="static/js_obfuscated/gamePhysics.js"></script>
+    <script src="static/js_obfuscated/game.js"></script>
+    {% else %}
+    <script src="{{ url_for('static', filename='js/levelMaps.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/levelPalettes.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/gameBackgrounds.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/gameDifficulties.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/gameGfx.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/gameIOandUI.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/gameParticles.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/gamePhysics.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+    {% endif %}
+</body>
+</html>
