@@ -20,7 +20,7 @@
 
     {% if config.get('DEPLOY_ENV') %}
     <link rel="stylesheet" href="static/css/styles.css">
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="487ffca0-f054-4df4-8d87-dbb450d4d9f1" type="text/javascript" async></script>
+    <script id="CookieDeclaration" src="https://consent.cookiebot.com/487ffca0-f054-4df4-8d87-dbb450d4d9f1/cd.js" type="text/javascript" async></script>
     {% else %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     {% endif %}
