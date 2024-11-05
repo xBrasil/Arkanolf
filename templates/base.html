@@ -8,9 +8,9 @@
 
     <!-- Favicon -->
     {% if config.get('DEPLOY_ENV') %}
-    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/static/images/icons/favicon.ico" type="image/x-icon">
     {% else %}
-    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename='images/icons/favicon.ico') }}" type="image/x-icon">
     {% endif %}
 
     <!-- Tailwind CSS -->
