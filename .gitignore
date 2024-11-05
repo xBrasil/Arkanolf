@@ -8,7 +8,8 @@ Procfile
 *.zip
 *.webp
 *.psd
-*.png
+Arkanolf*.png
 /build/
 /templates/
 /__pycache__/
+/static/images/textures/.old/*
