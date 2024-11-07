@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500">
+  <!-- Definindo um gradiente radial para dar uma aparência de textura rugosa -->
+  <defs>
+    <radialGradient id="stoneGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#a8a69d; stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6e6b66; stop-opacity:1" />
+    </radialGradient>
+    <filter id="noiseFilter">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" />
+      <feColorMatrix type="saturate" values="0.3" />
+      <feComposite operator="in" in2="SourceGraphic" />
+    </filter>
+  </defs>
+
+  <!-- Aplicando a base da pedra -->
+  <rect x="0" y="0" width="500" height="500" fill="url(#stoneGradient)" />
+
+  <!-- Camada de ruído para dar mais textura -->
+  <rect x="0" y="0" width="500" height="500" fill="url(#stoneGradient)" filter="url(#noiseFilter)" opacity="0.4" />
+</svg>

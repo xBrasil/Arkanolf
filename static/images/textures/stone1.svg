@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500">
+  <!-- Definindo um gradiente radial para dar uma aparência de textura rugosa -->
+  <defs>
+    <radialGradient id="stoneGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#a8a69d; stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6e6b66; stop-opacity:1" />
+    </radialGradient>
+    <filter id="noiseFilter">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" />
+      <feColorMatrix type="saturate" values="0.3" />
+      <feComposite operator="in" in2="SourceGraphic" />
+    </filter>
+  </defs>
+
+  <!-- Aplicando a base da pedra -->
+  <rect x="0" y="0" width="500" height="500" fill="url(#stoneGradient)" />
+
+  <!-- Camada de ruído para dar mais textura -->
+  <rect x="0" y="0" width="500" height="500" fill="url(#stoneGradient)" filter="url(#noiseFilter)" opacity="0.4" />
+
+  <!-- Adicionando formas irregulares para imitar rachaduras ou veios de pedra -->
+  <path d="M 100 100 C 150 120, 180 150, 200 180 S 300 300, 350 350"
+        stroke="#4a4742" stroke-width="3" fill="none" opacity="0.6"/>
+  <path d="M 400 150 C 350 200, 280 250, 300 300 S 200 400, 100 450"
+        stroke="#4a4742" stroke-width="2" fill="none" opacity="0.5"/>
+  <path d="M 50 400 C 100 380, 200 350, 220 320 S 300 300, 400 250"
+        stroke="#0e0b07" stroke-width="3" fill="none" opacity="0.4"/>
+</svg>
