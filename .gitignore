@@ -10,6 +10,7 @@ Procfile
 *.psd
 Arkanolf*.png
 /build/
+/screenshots/
 /templates/
 /__pycache__/
 /static/images/textures/.old/*
