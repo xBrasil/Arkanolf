@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecionando…</title>
+
+  <!-- 1) Redirecionamento via Meta Refresh após 3 segundos -->
+  <meta http-equiv="refresh" content="3;url=https://www.amazon.com.br/dp/B0F1DX89D1">
+
+  <!-- 2) Redirecionamento imediato via JavaScript -->
+  <script>
+    // Assim que o DOM carregar, redireciona imediatamente:
+    document.addEventListener('DOMContentLoaded', function() {
+      window.location.replace('https://www.amazon.com.br/dp/B0F1DX89D1');
+    });
+  </script>
+
+  <style>
+    /* Estilização simples para exibir uma mensagem amigável */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    .container {
+      background: #fff;
+      display: inline-block;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    a {
+      color: #146eb4;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Redirecionando…</h1>
+    <p>Você será levado em breve para a página do produto na Amazon.</p>
+    <p>Se o redirecionamento não ocorrer automaticamente, <a href="https://www.amazon.com.br/dp/B0F1DX89D1">clique aqui</a>.</p>
+  </div>
+</body>
+</html>
