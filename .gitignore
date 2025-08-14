@@ -1,13 +1,14 @@
 /node_modules
 Procfile
 *.pyc
-*.json
 *.zip
 *.webp
 *.psd
 *.log
 *.bak
-/.vs/
+.vs/
+build/
+README*.txt
 Arkanolf*.png
 /build/
 /screenshots/
