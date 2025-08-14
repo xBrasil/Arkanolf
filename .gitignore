@@ -1,7 +1,5 @@
 /node_modules
 Procfile
-*.txt
-*.py
 *.pyc
 *.json
 *.zip
@@ -13,6 +11,5 @@ Procfile
 Arkanolf*.png
 /build/
 /screenshots/
-/templates/
 /__pycache__/
 /static/images/textures/.old/*
