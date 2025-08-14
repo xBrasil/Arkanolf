@@ -1,0 +1,13 @@
+{
+  "name": "arkanolf",
+  "version": "1.2.2",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Rodolfo Motta Saraiva",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "globals": "^15.12.0"
+  }
+}
