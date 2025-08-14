@@ -8,6 +8,9 @@ Procfile
 *.zip
 *.webp
 *.psd
+*.log
+*.bak
+/.vs/
 Arkanolf*.png
 /build/
 /screenshots/
