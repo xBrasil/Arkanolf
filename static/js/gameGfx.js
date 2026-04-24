@@ -1399,7 +1399,6 @@ async function loadFonts() {
                 document.fonts.load('italic 400 100px Roboto'),
                 document.fonts.load('italic 700 100px Roboto')
             ]);
-            console.log('Todas as variantes da fonte Roboto foram carregadas.');
         } else {
             console.warn('API de Font Loading não suportada. Usando fontes fallback.');
         }

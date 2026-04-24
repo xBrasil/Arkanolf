@@ -146,7 +146,7 @@ function collisionDetection() {
                                     destroyBrick(b, hitPoint.x, hitPoint.y, STONE_COLOR);
                                 } else {
                                     addScore(GAME_BASE_HIT_POINTS * difficultyConfig.scoreMultiplier * Math.min(b.stoneStatus, 2));
-                                    b.stoneStatus = math.min(b.stoneStatus - 2, 0);
+                                    b.stoneStatus = Math.max(b.stoneStatus - 2, 0);
                                 }
                             } else {
                                 // Other balls reduce stone brick status by 1
