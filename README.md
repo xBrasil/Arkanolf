@@ -2,7 +2,8 @@
 
 A futuristic, neon-infused breakout game built entirely with vanilla JavaScript and HTML5 Canvas — no frameworks, no dependencies, no tracking.
 
-**[▶ Play Now](https://xbrasil.github.io/Arkanolf/)**
+> **Note:** This repository contains an earlier version of the game.  
+> The latest version (v1.2.5) is live at **[arkanolf.com](https://arkanolf.com/)**.
 
 ---
 
