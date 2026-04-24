@@ -1,16 +1,11 @@
 /node_modules
-Procfile
-*.pyc
 *.zip
 *.webp
 *.psd
 *.log
 *.bak
 .vs/
-build/
 README*.txt
 Arkanolf*.png
-/build/
 /screenshots/
-/__pycache__/
 /static/images/textures/.old/*
