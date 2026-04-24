@@ -6,6 +6,7 @@
 *.bak
 .vs/
 README*.txt
+!README.md
 Arkanolf*.png
 /screenshots/
 /static/images/textures/.old/*
