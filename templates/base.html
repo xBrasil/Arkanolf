@@ -20,18 +20,11 @@
 
     {% if config.get('DEPLOY_ENV') %}
     <link rel="stylesheet" href="static/css/styles.css">
-    <script id="CookieDeclaration" src="https://consent.cookiebot.com/487ffca0-f054-4df4-8d87-dbb450d4d9f1/cd.js" type="text/javascript" async></script>
     {% else %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     {% endif %}
 </head>
 <body>
-    {% if config.get('DEPLOY_ENV') %}
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QE91FG4KBB"></script>
-    <script src="static/js/googlestuff.js"></script>
-    {% endif %}
-    
     <!-- Conteúdo principal -->
     <main>
         {% block content %}{% endblock %}
